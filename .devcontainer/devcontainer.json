@@ -1,0 +1,14 @@
+{
+  "name": "aima-python-3.5",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "root",
+  "postCreateCommand": "python -m venv /workspace/venv && /workspace/venv/bin/pip install -r requirements.txt || true",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"],
+      "settings": {
+        "python.defaultInterpreterPath": "/workspace/venv/bin/python"
+      }
+    }
+  }
+}
